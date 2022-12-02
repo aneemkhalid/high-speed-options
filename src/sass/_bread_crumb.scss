@@ -1,0 +1,65 @@
+
+/* Breadcrumb */
+.breadcrumbs-container{
+    color: $grey2;
+    padding-top: 12px;
+    line-height: 17px;
+    @media screen and (max-width: $mobile-screen) {
+        flex-wrap: wrap;
+    }
+    &.has-banner{
+        color: $white;
+        margin-bottom: 25px;
+        li, span, a{
+            color: inherit;
+        }
+        a:hover{
+            color: inherit;
+            opacity: 1;
+        }
+        @media screen and (max-width: $tablet-screen) {
+            margin-bottom: 20px;
+        }
+    }
+    &.is-blog{
+        margin-bottom: 25px;
+    }
+    .breadcrumbs-list{
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: normal;
+        margin-bottom: 12px;
+        span{
+            display: flex;
+            align-items: center;
+            &.material-icons{
+                font-size: 17px;
+                width: 17px;
+                height: 17px;
+                overflow: hidden;
+            }
+        }
+    }
+    .advertiser-disclosure-link-container{
+        font-size: 12px;
+    }
+    a, span{
+        color: inherit;
+        font-size: 12px;
+        line-height: inherit;
+    }
+    a, .breadcrumb_last{
+        font-size: 12px;
+    }
+    .advertiser-disclosure-link{
+        color: $blue3;
+        &:hover{
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        @media screen and (max-width: $tablet-screen) {
+            text-decoration: underline;
+        }
+    }
+
+}

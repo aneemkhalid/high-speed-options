@@ -1,0 +1,112 @@
+/* Forms */
+
+.partnerships-page{
+    max-width: 720px;
+    margin: 0 auto;
+    .entry-title{
+        padding: 25px 0 15px 0;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        text-align: center;
+        color: $black3;
+        text-decoration: underline;
+        text-decoration-color: $primaryGreen;
+        -webkit-text-decoration-color: $primaryGreen;
+        @media screen and (max-width: $mobile-screen) {
+            padding-top: 3px;
+        }
+    }
+    p{
+        text-align: center;
+        &.form-instructions{
+            font-size: 14px;
+            color: $grey2;
+            font-weight: normal;
+            line-height: 24px;
+            opacity: .8;
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+    .with_frm_style{
+        .frm_form_field.form-field{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+            &.frm_blank_field{
+                input{
+                    border: solid 1px $red;
+                }
+                input::placeholder, .frm_description{
+                    color: $red;
+                }
+            }
+            .frm_primary_label, .frm_required{
+                color: $black3;               
+                &.frm_required{
+                    font-weight: normal;
+                }
+            }
+            input{
+                flex: 1 1 auto;
+                height: 56px;
+                max-width: 100%;
+                width: 100%;
+                padding: 8px 0 8px 12px;
+                margin: 0;
+                border: 0;
+                border-radius: 4px;
+                background-color: $inputBackground;
+                color: rgba(0,0,0,.87);
+                font-size: 100%;             
+                line-height: 1.15;
+                &:focus{
+                    background-color: $inputBackground;
+                }
+            }
+            .frm_description{
+                padding-top: 4px;
+                margin-bottom: 20px;        
+                color: $blackTransparent;
+            }
+            .frm_error, .frm_invalid{
+                color: $red;
+                font-size: 12px;
+                padding-top: 4px;
+                margin-bottom: 20px; 
+            }
+        }
+        .frm_submit{
+            text-align: center;
+            .frm_button_submit{
+                background-color: $blue3;
+                border-color: $blue3;
+                &:hover,&:focus{
+                    background-color: $blue3;
+                    background: $blue3;
+                    border-color: $blue3;
+                    color: $white;
+                }
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.form-submit-success-container{
+    text-align: center;
+    max-width: 720px;
+    .material-icons{
+        color: $lightGreen;
+        font-size: 100px;
+        margin-bottom: 25px;
+    }
+    h1{
+        padding: 10px 0 5px;
+       // font-weight: normal;
+       // line-height: 1;
+    }
+}

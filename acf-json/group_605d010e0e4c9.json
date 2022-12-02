@@ -1,0 +1,139 @@
+{
+    "key": "group_605d010e0e4c9",
+    "title": "FAQs List Block",
+    "fields": [
+        {
+            "key": "field_605d011727f99",
+            "label": "FAQ List",
+            "name": "faq_list",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_605d012d2e9ed": {
+                    "key": "layout_605d012d2e9ed",
+                    "name": "faq_group",
+                    "label": "FAQ Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_605d014c27f9a",
+                            "label": "FAQ Group Title",
+                            "name": "faq_group_title",
+                            "type": "text",
+                            "instructions": "Enter a title for this group of FAQs",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_605d016927f9b",
+                            "label": "FAQ Group Items",
+                            "name": "faq_group_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_605d0171e3000": {
+                                    "key": "layout_605d0171e3000",
+                                    "name": "faq_group_item",
+                                    "label": "FAQ Group Item",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_605d018427f9c",
+                                            "label": "Question",
+                                            "name": "question",
+                                            "type": "text",
+                                            "instructions": "Enter a question",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_605d023927f9d",
+                                            "label": "Answer",
+                                            "name": "answer",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "delay": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add New FAQ",
+                            "min": "",
+                            "max": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add New FAQ Group",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/faq-list"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1648737540
+}

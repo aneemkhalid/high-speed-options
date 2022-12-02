@@ -1,0 +1,304 @@
+{
+    "key": "group_6035117a4e536",
+    "title": "Campaigns",
+    "fields": [
+        {
+            "key": "field_60351c1f0eeef",
+            "label": "",
+            "name": "campaign",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_60351c3c0eef0",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add New Campaign",
+            "sub_fields": [
+                {
+                    "key": "field_6050d4c196975",
+                    "label": "Campaign Name",
+                    "name": "campaign_name",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "provider"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                },
+                {
+                    "key": "field_60351c3c0eef0",
+                    "label": "Type of Partnership",
+                    "name": "type_of_partnership",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "digital_link": "Paid Partner - Digital Link",
+                        "call_center": "Paid Partner - Call Center",
+                        "both": "Paid Partner - Digital Link & Call Center"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_60351d610eef1",
+                    "label": "Call Center #",
+                    "name": "call_center",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60351c3c0eef0",
+                                "operator": "==",
+                                "value": "call_center"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60351c3c0eef0",
+                                "operator": "==",
+                                "value": "both"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60351e090eef2",
+                    "label": "Digital Tracking Link",
+                    "name": "digital_tracking_link",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60351c3c0eef0",
+                                "operator": "==",
+                                "value": "digital_link"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60351c3c0eef0",
+                                "operator": "==",
+                                "value": "both"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62793cc3864fd",
+                    "label": "Primary Conversion Method",
+                    "name": "primary_conversion_method",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60351c3c0eef0",
+                                "operator": "==",
+                                "value": "both"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "digital_tracking_link": "Digital Link",
+                        "call_center": "Call Center"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_60351e430eef3",
+                    "label": "Coverage Type",
+                    "name": "coverage_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "zip_upload": "Zip Upload",
+                        "fcc": "FCC",
+                        "bundle_dealer_api": "Bundle Dealer API",
+                        "all": "All"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60351ea90eef4",
+                    "label": "Zip File",
+                    "name": "zip_file",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60351e430eef3",
+                                "operator": "==",
+                                "value": "zip_upload"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_60351f230eef5",
+                    "label": "FCC Holding Company Final",
+                    "name": "fcc_holding_company_final",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60351e430eef3",
+                                "operator": "==",
+                                "value": "fcc"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60351f360eef6",
+                    "label": "DBA Name",
+                    "name": "dba_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60351e430eef3",
+                                "operator": "==",
+                                "value": "fcc"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "build-buyer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1652112691
+}

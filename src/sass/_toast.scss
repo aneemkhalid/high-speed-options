@@ -1,0 +1,79 @@
+div.toast{
+    width: 335px;
+    height: auto;
+    background: $primaryGreen4;
+    display: flex;
+    position: fixed;
+    bottom: -150px;
+    right: 0;
+    border-radius: 10px;
+    padding: 20px 30px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+
+    @include media-breakpoint-up(md) { 
+        right: calc((100vw - 690px) / 2);
+    }
+    @include media-breakpoint-up(lg) { 
+        right: calc((100vw - 960px) / 2);
+    }
+    @include media-breakpoint-up(xl) { 
+        right: calc((100vw - 1080px) / 2);
+    }
+
+    &.active{
+        bottom: 60px;
+        opacity: 1;
+    }
+
+    figure{
+        width: 35px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    div.copy-cont{
+        padding-left: 16px;
+
+        p{
+            color: $white;
+            margin-bottom: 5px;
+        }
+        a{
+            color: $white;
+            font-weight: 700;
+
+            .toast-link-chevron{
+                position: relative;
+                top: 7px;
+            }
+        }
+    }
+    span.close-btn{
+        color: white;
+        font-weight: 400;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 22px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        // bottom: unset;
+        // top: -130px;
+        z-index: 10;
+        left: calc(50vw - 50%);
+        right: 0;
+        margin: auto;
+
+        &.active{
+            bottom: 80px;
+            // bottom: unset;
+            opacity: 1;
+        }
+    }
+}

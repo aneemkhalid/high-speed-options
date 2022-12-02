@@ -1,0 +1,335 @@
+// global styles
+.hmsdin-section{
+    @media only screen and (min-width: 576px){
+        &.row-full{
+            margin-left: calc(-50vw - 8px);
+        }
+    }
+    @media only screen and (min-width: 992px){
+        margin-top: 60px;
+    }
+    
+    // margin-bottom: 4rem;
+    background: #F3FAFF;
+
+    @media only screen and (max-width: 991.9px){
+        margin-bottom: 3rem;
+        .container{
+            padding: 32px 49px;
+        }
+    }
+    @media only screen and (max-width: 575.9px){
+        border-radius: 20px;
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+
+        .container{
+            padding: 32px 22px;
+        }
+    }
+    @media only screen and (min-width: 992px){
+        margin-bottom: 5rem;
+        &.show-speed{
+            margin-bottom: 0;
+        }
+    }
+    
+    .row-content{
+        align-items: center;
+        position: relative;
+
+        @media only screen and (min-width: 992px){
+            .col-image{
+                margin-top: -60px;
+                margin-bottom: -60px
+            }
+        }
+        @media only screen and (max-width: 991.9px){
+            .row-content{
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .col-copy{
+            @media only screen and (min-width: 992px){
+                max-width: 370px;
+            }
+        }
+        .hmsdin-title{
+            font-size: 36px;
+            line-height: 48px;
+            font-weight: 700;
+            text-decoration: none !important;
+
+            @media only screen and (max-width: 575.9px){
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+        p.hmsdin-description{
+            font-size: 18px;
+        }
+
+        .hmsdin-image-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+    
+            img{
+                width: 70%;
+                // width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+
+
+
+// when it is in sidebar
+.hmsdin-section.d-sidebar{
+    display: block;
+    @media only screen and (min-width: 1024px){
+        display: none;
+    }
+    @media only screen and (max-width: 1024px){
+        .container{
+            max-width: 768px;
+        }
+    }
+    @media only screen and (max-width: 991.9px){
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        &.show-speed{
+            margin-bottom: 0;
+        }
+        .container{
+            padding: 32px 15px;
+            max-width: 690px;
+        }
+        .row-speeds{
+            margin-top: 75px;
+        }
+    }
+    @media only screen and (max-width: 767.9px){
+        .row-speeds{
+            margin-top: 58px;
+        }
+        .container{
+            padding: 32px 49px;
+        }
+    }
+}
+
+// when it is inline and sidebar IS present
+#commercial_page_template,
+.toc-sidebar{
+    .hmsdin-section{       
+        @media only screen and (max-width: 991.9px){
+            margin-bottom: 30px;
+        } 
+        @media only screen and (min-width: 1200px){
+            margin-left: calc(((1080px - 100vw) / 2) - 8px);
+            left: 0;
+    
+            .container{
+                max-width: 725px;
+                margin-left: calc(((100vw - 1080px) / 2) - 8px);
+                
+                .hmsdin-image-container{     
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width: 1024px) and (max-width: 1199.9px){
+            margin-left: calc(((960px - 100vw) / 2) - 8px);
+            left: 0;
+    
+            .container{
+                max-width: 600px;
+                margin: unset;
+                margin-left: calc(((100vw - 960px) / 2) - 8px);
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1023.9px){
+            margin-left: calc(((768px - 100vw) / 2) - 8px);
+            left: 0;
+    
+            .container{
+                max-width: 768px;
+                margin: unset;
+                margin-left: calc(((100vw - 768px) / 2) - 8px);
+                
+                .hmsdin-image-container{     
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// speeds section
+.hmsdin-speeds-section{
+    margin-bottom: 3rem;
+    margin-top: 32px;
+    @media only screen and (min-width: 992px){
+        margin-top: 90px;
+    }
+
+    .row-speeds{
+
+        .speed-title{
+            color: $primaryGreen;
+            margin-bottom: .5rem;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .speed-description{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 21px;
+            color: #2c2c2c;
+        }
+    }
+
+    // speeds section if was in sidebar
+    &.d-sidebar{
+        @media only screen and (min-width: 1024px){
+            display: none;
+        }
+    }
+}
+.toc-sidebar .hmsdin-speeds-section{
+    @media only screen and (min-width: 1024px) and (max-width: 1199.9px){
+        margin-top: 32px;
+    }
+}
+
+#commercial_page_template{
+    .hmsdin-section{
+        @media only screen and (max-width: 991.9px){
+            margin-bottom: 3rem;
+        }
+        
+        &.show-speed{
+            margin-bottom: 0;
+        }
+        @media only screen and (max-width: 991.9px){
+            .container{
+                max-width: 690px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1023.9px){
+        margin-left: calc(((930px - 100vw) / 2) - 8px);
+            left: 0;
+    
+            .container{
+                max-width: 632px;
+                margin: unset;
+                margin-left: calc(((100vw - 930px) / 2) - 8px);
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+        }
+        @media only screen and (max-width: 767.9px){
+            .container{
+                max-width: unset;
+                padding: 32px 49px;
+            }
+        }
+
+        .container{
+            @media only screen and (min-width: 992px) and (max-width: 1023.9px){
+                max-width: 632px;
+
+                .col-image{
+                    .hmsdin-image-container img{
+                        width: 70%;
+                    }
+                }
+            }
+            @media only screen and (min-width: 1024px) and (max-width: 1199.9px){
+                max-width: 662px;
+
+                .col-image{
+                    margin-top: -70px;
+                    margin-bottom: -70px;
+                    .hmsdin-image-container img{
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+        &.d-sidebar{
+            display: block;
+            @media only screen and (min-width: 992px){
+                display: none;
+            }
+        }
+    }
+    .hmsdin-speeds-section{ 
+        @media only screen and (min-width: 1024px) and (max-width: 1199.9px){
+            margin-top: 60px;
+        }
+        @media only screen and (max-width: 1023.9px){
+            margin-top: 32px;
+        }
+        &.d-sidebar{
+            display: block;
+            @media only screen and (min-width: 992px){
+                display: none;
+            }
+        }
+    }
+}
+
+// sidebar section
+.hsmdin-toole-wrap{
+    @media only screen and (max-width: 1024px){
+        display: none;
+    }
+    p.hmsdin-title{
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    p.hmsdin-description{
+        margin-bottom: 15px;
+    }
+    .hmsdin-speed-cont{
+        margin-top: 2rem;
+        padding: 0 1.5rem;
+        h5{
+            color: $primaryGreen;
+        }
+        @media only screen and (max-width: 991.9px){
+            .row-speeds{
+                margin-top: 58px;
+            }
+        }
+    }
+}
+
+#commercial_page_template{
+    .hsmdin-toole-wrap{
+        @media only screen and (min-width: 992px){
+            display: block;
+        }
+    }
+}

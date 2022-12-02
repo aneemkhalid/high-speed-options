@@ -1,0 +1,107 @@
+/* FAQ */
+
+// styles for FAQ on FAQ PAGE
+.faq-page{
+    h1.entry-title{
+        text-align: center;
+        padding-top: 56px;
+    }
+
+
+    .faq-block-container{
+        position: relative;
+        &:first-of-type{
+            margin-top: 56px;
+        }
+    }   
+    .entry-content{
+        >p{
+            text-align: center;
+        }
+    }
+}
+
+// styles for FAQ on INSIGHTS pages
+.entry-content.sidebar-added{
+    .faq-block-container{
+        position: relative; 
+
+        .faq-block{
+            width: 100%;
+            padding: 80px 40px;
+            border-radius: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 1023.98px){
+        .faq-block-container{
+            position: relative;
+           // left: calc((-100vw + 768px) / 2);
+            //width: calc(100vw - 10px);
+            width:100vw;
+            left: 50%;
+            margin-left: -50vw;
+
+            .faq-block{
+                border-radius: 0;
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1023.98px){
+        .faq-block-container{
+            .faq-block{
+                .container{
+                    max-width: 768px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .faq-block-container{
+           // left: calc((-100vw + 690px) / 2);
+            width: 100vw;
+
+            .faq-block{
+            }
+        }
+    }
+    @media only screen and (max-width: 810px){
+        .faq-block-container{
+            .faq-block{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .faq-block-container{
+            //left: -22px;
+           
+            .faq-block{
+                padding-left: 0;
+                padding-right: 0;
+                .container{
+                }
+            }
+        }
+        
+        
+        
+    }
+}
+
+//if faq on insights with no toc
+ @media only screen and (min-width: 1200px){
+.page-template-default  .faq-block-container.row-full, .locations-main .faq-block-container.row-full{ 
+         width: calc(100vw - 10px);
+        }     
+     
+     
+.single-post article.post:not(.toc-sidebar) .entry-content:not(.sidebar-added) .faq-block-container.row-full{
+    width: calc(100vw - 10px);
+}
+     
+     
+     
+}

@@ -1,0 +1,124 @@
+/* Zip Search */
+ 
+.deals_tile_main{
+	background:$lightGrey;
+	padding:40px 40px 10px;
+	margin-bottom: 30px;
+	@media screen and (max-width: $mobile-screen){
+		padding: 30px 22px 1px;
+	}
+}
+.deals_tile{
+	background:$white;
+	padding:25px;
+	margin-bottom: 30px;
+	@media screen and (max-width: $mobile-screen){
+		padding:25px 15px;
+	}
+	.head{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
+		@media screen and (max-width: $mobile-screen){
+			flex-direction: column;
+			justify-content: center;
+		}
+		a{
+			@media screen and (max-width: $mobile-screen){
+					margin-bottom: 15px;
+				}
+			img{
+			width: 150px;
+			object-fit: contain;
+		    }
+		}
+		
+		.callout-text{
+			p{
+				margin-bottom:0;
+				display: flex;
+				align-items: center;
+				span{
+					width:17px;
+					height:17px;
+					font-size: 17px;
+					color:$lightGreen;
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.check_availability{
+		a{
+			padding: 11px 39px;
+		    border-radius: 10px;
+		    border: solid 2px $blue;
+		    background-color: $blue;
+		    font-size: 16px;
+			font-weight: bold;
+			color: $white;
+			transition: all ease-in-out 0.8s;
+			margin:0;
+			@media screen and (max-width: $mobile-screen){
+					width: 100%;
+					text-align: center;
+					padding: 8px 39px;
+				}
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+	>p{
+		margin-bottom: 15px;
+	}
+}
+
+.tile_detail{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:15px 0 7px;
+	border-top: 1px solid $grey;
+	border-bottom:1px solid $grey;
+	margin-bottom: 15px;
+	flex-wrap: wrap;
+	.wrap{
+	 	display: flex;
+	 	align-items: center;
+	 	margin-bottom: 8px;
+	 	@media screen and (max-width: $mobile-screen){
+		  width: 50%;
+		}
+		@media screen and (max-width: $small-mobile-screen){
+		  width: 100%;
+		}
+	 	img{
+           margin-right: 10px;
+           @media screen and (max-width: $mobile-screen){
+			  width: 28px;
+			  height: 28px;
+			  object-fit: contain;
+			}
+	 	}
+	 	h6{
+ 		  //font-size: 14px;
+		 // font-weight: bold;
+		 // line-height: 1.29;
+		  color: $blue2;
+	 		span{
+              font-weight: normal;
+              color: $black3;
+              display: block;
+              //font-size: 14px;
+              //line-height: 1.29;
+              @media screen and (max-width: $small-mobile-screen){
+				  display: inline-block;
+				  padding-left: 5px;
+				}
+	 		}
+	 	}
+	 }
+}

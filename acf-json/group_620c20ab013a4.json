@@ -1,0 +1,41 @@
+{
+    "key": "group_620c20ab013a4",
+    "title": "Programmatic City Page",
+    "fields": [
+        {
+            "key": "field_620c20c737f2a",
+            "label": "List of Shortcodes",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "contains-code",
+                "id": ""
+            },
+            "message": "<h3 style=\"font-size:18px;\">Top Two Internet Providers Sentence<\/h3>\r\n<span>[top_two_internet_providers]<\/span>\r\n<p>Displays a sentence listing the top two providers (or one if applicable) in a given city based on number of tracts they service. <\/p>\r\n<h3 style=\"font-size:18px;\">Internet Types<\/h3>\r\n<span>[internet_types_availability]<\/span>\r\n<p>Displays a paragraph describing the top types of internet available in a city based on coverage.<\/p>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post",
+                "operator": "==",
+                "value": "10108"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1644962556
+}

@@ -1,0 +1,119 @@
+{
+    "key": "group_61ddb02900993",
+    "title": "Theme Settings - Locations",
+    "fields": [
+        {
+            "key": "field_61ddb065b73f0",
+            "label": "Locations Settings",
+            "name": "locations_settings",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61ddb0fbb73f1",
+                    "label": "Provider Table Columns",
+                    "name": "provider_table_columns",
+                    "type": "repeater",
+                    "instructions": "Select columns you would like to display on the provider table on all city pages.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add Column",
+                    "sub_fields": [
+                        {
+                            "key": "field_61ddb278b73f3",
+                            "label": "Column Name",
+                            "name": "column_name",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61ddb246b73f2",
+                            "label": "Column",
+                            "name": "column",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "starting_price": "Starting Price",
+                                "max_upload_speed": "Max Upload Speed",
+                                "max_download_speed": "Max Download Speed",
+                                "free_wifi_hotspots": "Free WiFi Hotspots",
+                                "connection_types": "Connection Types",
+                                "data_caps": "Data Caps",
+                                "symmetrical_speeds": "Symmetrical Speeds",
+                                "installation_fee": "Installation Fee",
+                                "equipment_fee": "Equipment Fee",
+                                "acsi_rating": "ACSI Rating",
+                                "fixed_price_guarentee": "Fixed price Guarantee",
+                                "credit_check_required": "Credit Check Required",
+                                "contract_buyouts": "Contract Buyouts",
+                                "early_termination_fee": "Early Termination Fee",
+                                "contracts": "Contracts"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-locations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1644425746
+}

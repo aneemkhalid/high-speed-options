@@ -1,0 +1,95 @@
+{
+    "key": "group_62853604ad1fe",
+    "title": "Creative CTA Block",
+    "fields": [
+        {
+            "key": "field_6285362a558af",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "internet": "Internet",
+                "tv": "TV\/Cable",
+                "bundle": "Bundle",
+                "security": "Home Security",
+                "phone": "Phone",
+                "cyber": "Cybersecurity",
+                "work": "Remote Work",
+                "school": "Remote School",
+                "gaming": "Gaming",
+                "streaming": "Streaming",
+                "fiber": "Fiber",
+                "satellite": "Satellite",
+                "dsl": "DSL",
+                "cable": "Cable"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_628536b7558b0",
+            "label": "Descriptive Text",
+            "name": "descriptive_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_628536ef558b1",
+            "label": "CTA Link",
+            "name": "cta_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/creative-cta"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1653065227
+}

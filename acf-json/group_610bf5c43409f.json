@@ -1,0 +1,48 @@
+{
+    "key": "group_610bf5c43409f",
+    "title": "State",
+    "fields": [
+        {
+            "key": "field_610bf5c8fc39b",
+            "label": "Abbreviation",
+            "name": "abbreviation",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 2
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "locations"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "location_type:state"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1641508901
+}

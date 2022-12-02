@@ -1,0 +1,199 @@
+/*!
+Theme Name: High Speed Options
+Theme URI: https://www.adaction.com/
+Author: AdAction
+Author URI: https://www.adaction.com/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: hso
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* @import '../node_modules/material-icons/iconfont/material-icons.scss'; */
+
+/* import material icons - some code moved over to here from mixins.scss and material-icons.scss so we could add font-display:swap to the font face */
+@import '../node_modules/material-icons/iconfont/variables';
+
+@function material-icons-str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      material-icons-str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+@function material-icons-content($codepoint) {
+  @return unquote('"\\#{$codepoint}"');
+}
+
+@mixin material-icons-font-face(
+  $font-family: $material-icons-font-family,
+  $font-name: $material-icons-font-name,
+  $otf: false,
+  $font-path: $material-icons-font-path
+) {
+  $font-file: $font-path + $font-name;
+  $font-eot: $font-file + '.eot';
+  @font-face {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 400;
+
+    src: url('#{$font-file}.eot'); /* For IE6-8 */
+    src: local($font-family), local($font-name),
+      url('#{$font-file}.woff2') format('woff2'),
+      url('#{$font-file}.woff') format('woff'),
+      if(
+        $otf,
+        url('#{$font-file}.otf') format('opentype'),
+        url('#{$font-file}.ttf') format('truetype')
+      );
+    font-display:swap;
+  }
+}
+
+@mixin material-icons(
+  $font-family: $material-icons-font-family,
+  $font-size: $material-icons-font-size
+) {
+  font-family: $font-family;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $font-size;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@mixin material-icon($name, $pseudo: 'before') {
+  $codepoint: map-get($material-icons-codepoints, $name);
+
+  &:#{$pseudo} {
+    content: material-icons-content($codepoint);
+  }
+}
+
+
+@include material-icons-font-face();
+
+.material-icons {
+  @include material-icons();
+}
+
+@each $name in 'Outlined', 'Round', 'Sharp', 'Two Tone' {
+  $font-family: 'Material Icons #{$name}';
+  $font-name: material-icons-str-replace($name, ' ', '');
+  $font-name: 'MaterialIcons#{$font-name}-Regular';
+  $class-name: material-icons-str-replace(to-lower-case($name), ' ', '-');
+
+  @include material-icons-font-face($font-family, $font-name, true);
+
+  .material-icons-#{$class-name} {
+    @extend .material-icons;
+    font-family: $font-family;
+  }
+}
+
+@import '../src/sass/styleguide';
+@import '../src/sass/variable';
+
+/* only import bootstrap componants that we need */
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/root';
+@import '../node_modules/bootstrap/scss/reboot';
+@import '../node_modules/bootstrap/scss/type';
+@import '../node_modules/bootstrap/scss/images';
+@import '../node_modules/bootstrap/scss/code';
+@import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/tables';
+/* @import '../node_modules/bootstrap/scss/forms'; */
+@import '../node_modules/bootstrap/scss/buttons';
+@import '../node_modules/bootstrap/scss/transitions';
+@import '../node_modules/bootstrap/scss/dropdown';
+/* @import '../node_modules/bootstrap/scss/button-group'; */
+/* @import '../node_modules/bootstrap/scss/input-group'; */
+/* @import '../node_modules/bootstrap/scss/custom-forms'; */
+@import '../node_modules/bootstrap/scss/nav';
+@import '../node_modules/bootstrap/scss/navbar';
+@import '../node_modules/bootstrap/scss/card';
+/* @import '../node_modules/bootstrap/scss/breadcrumb'; */
+/* @import '../node_modules/bootstrap/scss/pagination'; */
+/* @import '../node_modules/bootstrap/scss/badge'; */
+/* @import '../node_modules/bootstrap/scss/jumbotron'; */
+/* @import '../node_modules/bootstrap/scss/alert'; */
+@import '../node_modules/bootstrap/scss/progress';
+/* @import '../node_modules/bootstrap/scss/media'; */
+/* @import '../node_modules/bootstrap/scss/list-group'; */
+@import '../node_modules/bootstrap/scss/close';
+/* @import '../node_modules/bootstrap/scss/toasts'; */
+@import '../node_modules/bootstrap/scss/modal';
+/* @import '../node_modules/bootstrap/scss/tooltip'; */
+/* @import '../node_modules/bootstrap/scss/popover'; */
+/* @import '../node_modules/bootstrap/scss/carousel'; */
+/* @import '../node_modules/bootstrap/scss/spinners'; */
+@import '../node_modules/bootstrap/scss/utilities';
+/* @import '../node_modules/bootstrap/scss/print'; */
+
+@import '../node_modules/slick-carousel/slick/slick.scss';
+@import '../src/sass/common';
+@import '../src/sass/provider';
+@import '../src/sass/bread_crumb';
+@import '../src/sass/header';
+@import '../src/sass/footer';
+@import '../src/sass/single';
+@import '../src/sass/zip_search';
+@import '../src/sass/vertical_page';
+@import '../src/sass/form';
+
+@import '../src/sass/contact';
+@import '../src/sass/rotating_logos';
+@import '../src/sass/product_options';
+@import '../src/sass/browse_providers';
+@import '../src/sass/insights';
+@import '../src/sass/commercial_page';
+@import '../src/sass/comparison-template';
+@import '../src/sass/deals_tile';
+@import '../src/sass/comparison_tile';
+@import '../src/sass/provider_plan_details';
+@import '../src/sass/resource_template';
+@import '../src/sass/about';
+@import '../src/sass/author_bio_page';
+@import '../src/sass/page_404';
+@import '../src/sass/locations';
+@import '../src/sass/disclaimer_box';
+@import '../src/sass/satellite_page';
+@import '../src/sass/how_much_speed';
+@import '../src/sass/vertical_template_new';
+@import '../src/sass/hmsdin_tool_element';
+@import '../src/sass/toast';
+@import '../src/sass/comparison-aggregate';
+
+@import '../src/sass/faq';

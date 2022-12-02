@@ -1,0 +1,364 @@
+{
+    "key": "group_609c355c5318e",
+    "title": "Compare Providers Table (Horizontal Scroll)",
+    "fields": [
+        {
+            "key": "field_609c355cb966d",
+            "label": "Compare Providers Horizontal Scroll",
+            "name": "compare_providers_horizontal_scroll",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_609c355cc6332",
+                    "label": "Provider Type",
+                    "name": "provider_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "internet": "Internet",
+                        "tv": "TV",
+                        "bundles": "Bundles"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_609c355cc6338",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_609c362a03980",
+                    "label": "Subheading",
+                    "name": "subheading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_609c355cc633e",
+                    "label": "Table Columns",
+                    "name": "table_columns",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_609c355d047a0",
+                            "label": "Bundle Data Type",
+                            "name": "bundles_data_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_609c355cc6332",
+                                        "operator": "==",
+                                        "value": "bundles"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "starting_price": "Starting Price",
+                                "minimum_channel_count": "Maximum Channel Count",
+                                "max_download_speeds": "Max Download Speeds",
+                                "acsi_rating": "ACSI Rating",
+                                "fixed_price_guarentee": "Fixed price Guarantee",
+                                "credit_check_required": "Credit Check Required",
+                                "contract_buyouts": "Contract Buyouts",
+                                "early_termination_fee": "Early Termination Fee"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_609c355d04782",
+                            "label": "TV Data Type",
+                            "name": "tv_data_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_609c355cc6332",
+                                        "operator": "==",
+                                        "value": "tv"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "starting_price": "Starting Price",
+                                "connection_types": "Connection Types",
+                                "minimum_channel_count": "Maximum Channel Count",
+                                "dvr_recordings": "DVR Recordings",
+                                "tv_installation_fee": "TV Installation Fee",
+                                "tv_equipment_fee": "TV Equipment Fee",
+                                "acsi_rating": "ACSI Rating",
+                                "fixed_price_guarentee": "Fixed price Guarantee",
+                                "credit_check_required": "Credit Check Required",
+                                "contract_buyouts": "Contract Buyouts",
+                                "early_termination_fee": "Early Termination Fee"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_609c355d0478a",
+                            "label": "Internet Data Type",
+                            "name": "internet_data_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_609c355cc6332",
+                                        "operator": "==",
+                                        "value": "internet"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "starting_price": "Starting Price",
+                                "max_upload_speed": "Max Upload Speed",
+                                "max_download_speed": "Max Download Speed",
+                                "free_wifi_hotspots": "Free WiFi Hotspots",
+                                "connection_types": "Connection Types",
+                                "symmetrical_speeds": "Symmetrical Speeds",
+                                "data_caps": "Data Caps",
+                                "installation_fee": "Installation Fee",
+                                "equipment_fee": "Equipment Fee",
+                                "contracts": "Contracts",
+                                "acsi_rating": "ACSI Rating",
+                                "fixed_price_guarentee": "Fixed price Guarantee",
+                                "credit_check_required": "Credit Check Required",
+                                "contract_buyouts": "Contract Buyouts",
+                                "early_termination_fee": "Early Termination Fee"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_609c355d047a5",
+                            "label": "Column Name",
+                            "name": "column_name",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_609c355cc634a",
+                    "label": "Providers",
+                    "name": "providers",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "provider"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 1,
+                    "multiple": 1,
+                    "return_format": "id",
+                    "ui": 1
+                },
+                {
+                    "key": "field_60c0ef421284e",
+                    "label": "Button Type",
+                    "name": "button_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "link": "Provider Phone\/Link",
+                        "popup": "Zip Search Popup"
+                    },
+                    "default_value": "link",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60c0ef6f1284f",
+                    "label": "Button Text",
+                    "name": "button_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60c0ef421284e",
+                                "operator": "==",
+                                "value": "popup"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Check Availability",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_611e9efcca6f8",
+                    "label": "Source",
+                    "name": "source",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/compare-providers-horizontal-scroll"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1642441483
+}

@@ -1,0 +1,38 @@
+.page-not-found{
+	padding:50px 0 100px;
+	img{
+		margin-bottom:55px;
+	}
+	.page-not-found-content{
+		text-align: center;
+		max-width: 715px;
+		margin:0 auto;
+		h1 {
+			span {
+				color: #039b8e;
+			}
+		}
+/*		h1{
+			font-weight: normal;
+			margin-bottom: 25px;
+			@media screen and (max-width: $tablet-screen){
+				font-size:40px;
+			}
+			span{
+				font-weight: normal;
+				@media screen and (max-width: $tablet-screen){
+					font-size:40px;
+				}
+			}
+		}
+		p{
+            margin-bottom: 30px;
+			color: $black;
+		}
+		a{
+			background: $blue;
+			box-shadow:none;
+			padding:10px 43px;
+		}*/
+	}
+}

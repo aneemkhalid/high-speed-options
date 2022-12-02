@@ -1,0 +1,46 @@
+{
+    "key": "group_619d14c8aeed1",
+    "title": "City",
+    "fields": [
+        {
+            "key": "field_619d14d622fd1",
+            "label": "List of Shortcodes",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "contains-code",
+                "id": ""
+            },
+            "message": "<h3 style=\"font-size:18px;\">Count of Unique Providers<\/h3>\r\n<span>[provider_count]<\/span>\r\n<p>Displays a count of unique providers that serve this particular city. <\/p>\r\n<h3 style=\"font-size:18px;\">City Name<\/h3>\r\n<span>[city_name]<\/span>\r\n<p>Displays the city name (e.g. Atlanta).<\/p>\r\n<h3 style=\"font-size:18px;\">State Name<\/h3>\r\n<span>[state_name]<\/span>\r\n<p>Displays the state name (e.g. GA).<\/p>\r\n<h3 style=\"font-size:18px;\">Max Residential Download Speed in City<\/h3>\r\n<span>[max_residential_download_speed_in_city]<\/span>\r\n<p>Displays the highest download speed for the city.<\/p>\r\n<h3 style=\"font-size:18px;\">Provider with Max Residential Download Speed in City<\/h3>\r\n<span>[max_residential_download_speed_provider_in_city]<\/span>\r\n<p>Displays the name of the provider with the highest download speed for the city.<\/p>\r\n<h3 style=\"font-size:18px;\">Top Internet Provider<\/h3>\r\n<span>[top_internet_provider]<\/span>\r\n<p>Displays the name of the top internet provider for a given city based on the number of tracts they service.<\/p>\r\n<h3 style=\"font-size:18px;\">City Population<\/h3>\r\n<span>[city_population]<\/span>\r\n<p>Displays the formatted population of the city.<\/p>\r\n<h3 style=\"font-size:18px;\">Search by Zip<\/h3>\r\n<span>[search_by_zip text=\"Enter your zip code here\"]<\/span>\r\n<p>Displays linked text that shows a zip search box when clicked on. You may enter the text that will be shown.<\/p>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "locations"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "location_type:city"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1645116674
+}

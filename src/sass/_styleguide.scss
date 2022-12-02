@@ -1,0 +1,36 @@
+/* Style Guide */
+
+// COLOR SCHEME
+$color-primary: #039B8E;
+$color-primary-cta: #0791ED;
+$color-hover: #44D1A0;
+$color-error: #E02020;
+$color-full-black: #000000;
+$color-regular-text: #2C2C2C;
+$color-hint-text: #818181;
+$color-lines-strokes: #BCBCBC;
+$color-light-background: #F5F5F5;
+$color-full-white: #ffffff;
+
+// TYPOGRAPHY
+//creating fallback fonts that match google fonts
+@font-face {
+    font-family: 'Roboto-fallback';
+    size-adjust: 97.5%;
+    ascent-override: 94%;
+    descent-override: 22%;
+    line-gap-override: 5%; 
+    src: local('Arial');
+}
+
+@font-face {
+    font-family: 'Manrope-fallback';
+    size-adjust: 99.0%;
+    ascent-override: 90%;
+    descent-override: 20.0%;
+    line-gap-override: 8%;
+    src: local('Arial Bold');
+}
+
+// MAX WIDTH
+$max-width: 1050px;

@@ -1,0 +1,52 @@
+/* Browse Providers */
+
+.browser-provider-types-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .provider-types-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        @media screen and (max-width: $tablet-screen){
+            text-align: center;
+        }
+        @media screen and (max-width: $mobile-screen){
+            flex-direction: column;
+        }
+        .group-container{
+            flex: 0 0 33.3333333333%;
+            max-width: 33.3333333333%;
+            padding: 0 12px;
+            margin-top: 30px;
+            text-align: center;
+            @media screen and (max-width: $tablet-screen){
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            @media screen and (max-width: $mobile-screen){
+                max-width: 100%;
+                margin-top: 0;
+                padding: 12px 0;
+            }
+            .group-content-container{
+                padding: 25px 25px 10px;
+                border-radius: 4px;
+                background: $primaryGreen;
+                .icon-container{
+                    margin-bottom: 25px;
+                    & > img{
+                        height: 150px;
+                    }
+                }
+                .label{
+                    color: $white;
+                    font-weight: 300;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

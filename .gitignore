@@ -1,0 +1,30 @@
+### WordPress ###
+# ignore node dependency directories
+node_modules/
+vendor/
+providers.csv
+broadband_hso.csv
+custom-sitemaps/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+#build tool files not needed
+build/*
+build/
+build/index.js
+build/index.js.map
+build/index.js.LICENSE
+build/index-gutenberg.js
+build/index-gutenberg.js.map
+style.css.map
+style.min.css
+
+src/css/admin-styles.css
+
+build/index.js.LICENSE.txt
+.DS_Store
+*.map
+

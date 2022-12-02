@@ -1,0 +1,116 @@
+/* Variables */
+
+/*For Colors*/
+$transparent : transparent;
+$white: #fff;
+$black: #000000;
+$blackTransparent: rgba(0, 0, 0, 0.5);
+$black2: #333333;
+$black2Transparent: rgba(33, 33, 33, 0.46);
+$black3: #2c2c2c;
+$black4: #151515;
+$black5: #2F2F2F;
+$lightBlue: #F3FAFF;
+$blue: #0091ff;
+$blueHover: rgba(0,145,255, 0.8); 
+$blue2: #00647e;
+$blue3: #0791ed;
+$blue4: #1a93b3;
+$blue5: #F3FFFB;
+$blue6: #BFE5FF;
+$blue7: #00538F;
+$darkGrey: #979797;
+$darkGrey2: #747474;
+$grey: #bcbcbc;
+$grey2: #818181;
+$grey3: #e5e5e5;
+$grey4: #686868;
+$grey6: #ededed;
+$grey5: #D9D9D9;
+$grey7: #747474;
+$grey8: #C4C4C4;
+$grey9: #D5D5D5;
+$grey10: #f9f9f9;
+$brownishGrey: #5e5e5e;
+$lightGrey: #f5f5f5;
+$lightGrey2: #B4B4B4;
+$primaryGreen: #039b8e;
+$primaryGreen2: #007f73 ;
+$primaryGreen3: #097d73;
+$primaryGreen4: #006C61;
+$primaryGreenTransparent: rgba(3, 155, 142, 0.5);
+$darkGreen:#006C61;
+$lightGreen: #44d1a0;
+$lightGreenTransparent: rgba(68, 209, 160, 0.1);
+$lightGreen2: #41c798;
+$lightGreen3: #F3FFFB;
+$lightGreen4: #D6F6F2;
+$lightGreen5: rgba(84, 205, 190, 0.1);
+$red: #e02020;
+$primaryBoxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$primaryBoxShadow2: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+$primaryBoxShadow3: 0px 10px 30px rgba(143, 143, 143, 0.1);
+$primaryBoxShadow4: 0px 4px 25px rgba(0, 0, 0, 0.1);
+$primaryBoxShadow5: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$primaryBoxShadow6: 0px 8px 24px rgba(0, 0, 0, 0.1);
+$primaryBoxShadow7: 0px 2px 4px rgba(0, 0, 0, 0.146219);
+$primaryBoxShadow8:  0px 6px 20px rgba(0, 0, 0, 0.1);
+$shadow-base: 0px 4px 25px rgba(0, 0, 0, 0.1);
+$inputBackground: rgba(0, 0, 0, 0.06);
+
+
+
+
+
+/*For media queries*/
+$laptop-screen: 1365px;
+$deskop-screen-container : 1200px;
+$tablet-screen : 1199px;
+$small-tablet-screen : 991px;
+$mobile-screen : 767px;
+$small-mobile-screen : 575px;
+
+$font-size-base:              1.0rem ; //1.125rem
+
+/*For Fonts*/
+
+/*$font-family-sans-serif:      Calibri, sans-serif;
+$headings-font-family:        Arial, Helvetica Neue, Helvetica, sans-serif;*/
+$font-family-sans-serif:      'Roboto', 'Roboto-fallback', sans-serif;
+$headings-font-family:        'Manrope', 'Manrope-fallback', sans-serif;
+
+
+$font-family-monospace:       "Courier New", monospace ;
+$font-family-base:            $font-family-sans-serif;
+
+$body-color:  #444444;
+$headings-color: #2f2f2f;
+
+$line-height-base:            1.39;
+$headings-margin-bottom:      1.125rem;
+
+$p-font-size: 16px;
+
+$h1-font-size:                48px;
+$h2-font-size:                30px;
+$h3-font-size:                24px;
+$h4-font-size:                20px;
+$h5-font-size:                18px;
+$h6-font-size:                14px;
+
+$table-font-size: 16px;
+
+$headings-font-weight: 700;
+
+$headings-line-height: 1.39;
+
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 4)
+)
+
+//font bridge
+
+//$content-commercial-h2-font-size: 24px;
+
+

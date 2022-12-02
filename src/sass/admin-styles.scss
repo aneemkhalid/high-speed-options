@@ -1,0 +1,187 @@
+/*!
+Admin only styles
+*/
+
+/* purgecss start ignore */
+.contains-code span{
+	padding: 3px 5px 2px 5px;
+    margin: 0 1px;
+    background: rgba(0,0,0,.07);
+    font-size: 13px;
+    font-family: Consolas,Monaco,monospace;
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+.wysiwyg-resize .wp-editor-area, .wysiwyg-resize iframe{
+    height: 75px !important;
+    min-height: 0 !important;
+}
+
+.migration-banner {
+    text-align: center;
+    padding: 12px 0;
+    color: white;
+    //background-color: #dc2626;
+    background: linear-gradient(to right, #dc2626, #ea580c);
+    font-weight: 700;
+    position: fixed;
+    width: auto;
+    z-index: 9999;
+    top: 46px;
+    left: 0px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: solid 3px transparent;
+    @media screen and (min-width: 783px){
+        top: 32px;
+        left: 160px;
+    }
+    svg {
+        margin-right: 10px;
+    }
+    .gif-container {
+        display: flex;
+        align-items: center;
+        div:nth-child(odd) {
+            display: none;
+            @media screen and (min-width: 1024px){
+                display: block
+            }
+        }
+        img {
+            height: 32px !important;
+            width: 32px !important;
+            max-width: none;
+        }
+    }
+    .scroll-container {
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .scroll-text {
+        transform: translateX(100%);
+        white-space: nowrap;
+        font-size: 16px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        animation: scrolling-text 10s linear infinite;
+        @media screen and (min-width: 1280px){
+            animation: scrolling-text 30s linear infinite;
+        }
+    }
+    .fire-ribbon {
+        background-image: url('../../images/fire.gif');
+        position: absolute;
+        opacity: 0.8;
+        bottom: -13px;
+        left: 0;
+        background-repeat: repeat-x;
+        background-position: center;
+        width: 100%;
+        height: 42px;
+        z-index: 10;
+    }
+}
+
+@keyframes scrolling-text {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+.migration-on {
+    &.block-editor-page {
+        .migration-banner {
+            top: 0;
+            left: 0;
+        }
+    }
+    &.folded {
+        .migration-banner {
+            left: 36px;
+        }
+    }
+    &.post-type-acf-field-group {
+        #wpbody-content {
+            margin-top: 0;
+        }
+        .acf-admin-toolbar {
+            margin-top: 63px;
+        }
+    }
+    &.auto-fold {
+        .migration-banner {
+            @media screen and (min-width: 783px){
+                left: 36px;
+            }
+            @media screen and (min-width: 961px){
+                left: 160px;
+            }
+        }
+    }
+    &.auto-fold.folded {
+        .migration-banner {
+            @media screen and (min-width: 783px){
+                left: 36px;
+            }
+            @media screen and (min-width: 961px){
+                left: 36px;
+            }
+        }
+    }
+    .filebird-app-wrapper {
+        @media screen and (min-width: 783px){
+            margin-top: 63px;
+        }
+    }
+       
+}
+
+.migration-on.block-editor-page {
+    .migration-banner {
+        top: 46px;
+        @media screen and (min-width: 782px){
+            top: 0;
+        }
+        @media screen and (min-width: 783px){
+            left: 0;
+        }
+    }
+    .edit-post-layout {
+        padding-top: 60px;
+        @media screen and (min-width: 782px){
+            padding-top: 16px;
+        }
+        @media screen and (min-width: 783px){
+            padding-top: 60px;
+        }
+    }
+}
+
+
+.wp-customizer .migration-banner {
+    display: none;
+}
+
+.migration-on #wpbody-content {
+    margin-top: 63px;
+}
+.mr-4 {
+    margin-right: 1.5rem;
+}
+.mr-3 {
+    margin-right: 1rem;
+}
+.ml-4 {
+    margin-left: 1.5rem;
+}
+.ml-3 {
+    margin-left: 1rem;
+}
+/* purgecss end ignore */

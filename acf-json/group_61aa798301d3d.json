@@ -1,0 +1,358 @@
+{
+    "key": "group_61aa798301d3d",
+    "title": "Our Picks Block",
+    "fields": [
+        {
+            "key": "field_61ae6d2d4d3b5",
+            "label": "Provider Type",
+            "name": "provider_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "internet": "Internet"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "internet",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61ae6685a520b",
+            "label": "Providers",
+            "name": "providers",
+            "type": "post_object",
+            "instructions": "Choose between 2 - 5 Providers.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "provider"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_61aafcd4d4a4b",
+            "label": "Table Columns",
+            "name": "table_columns",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61aafcecd4a4c",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_61ae6d894d3b7",
+                    "label": "TV Data Type",
+                    "name": "tv_data_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61ae6d2d4d3b5",
+                                "operator": "==",
+                                "value": "tv"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "starting_price": "Starting Price",
+                        "connection_types": "Connection Types",
+                        "minimum_channel_count": "Maximum Channel Count",
+                        "dvr_recordings": "DVR Recordings",
+                        "tv_installation_fee": "TV Installation Fee",
+                        "tv_equipment_fee": "TV Equipment Fee",
+                        "acsi_rating": "ACSI Rating",
+                        "fixed_price_guarentee": "Fixed price Guarantee",
+                        "credit_check_required": "Credit Check Required",
+                        "contract_buyouts": "Contract Buyouts",
+                        "early_termination_fee": "Early Termination Fee",
+                        "custom": "Custom"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61aafcecd4a4c",
+                    "label": "Column Name",
+                    "name": "column_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61aafd08d4a4d",
+                    "label": "Internet Data Type",
+                    "name": "internet_data_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61ae6d2d4d3b5",
+                                "operator": "==",
+                                "value": "internet"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "starting_price": "Starting Price",
+                        "max_upload_speed": "Max Upload Speed",
+                        "max_download_speed": "Max Download Speed",
+                        "free_wifi_hotspots": "Free WiFi Hotspots",
+                        "connection_types": "Connection Types",
+                        "data_caps": "Data Caps",
+                        "symmetrical_speeds": "Symmetrical Speeds",
+                        "installation_fee": "Installation Fee",
+                        "equipment_fee": "Equipment Fee",
+                        "acsi_rating": "ACSI Rating",
+                        "fixed_price_guarentee": "Fixed price Guarantee",
+                        "credit_check_required": "Credit Check Required",
+                        "contract_buyouts": "Contract Buyouts",
+                        "early_termination_fee": "Early Termination Fee",
+                        "contracts": "Contracts",
+                        "custom": "Custom"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61aafe26d4a51",
+                    "label": "Custom Values",
+                    "name": "custom_values",
+                    "type": "repeater",
+                    "instructions": "Set custom values for each provider. Add in same order as providers.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61aafd08d4a4d",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_61aafe4ed4a52",
+                            "label": "Value",
+                            "name": "value",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_61ae6d684d3b6",
+                    "label": "Bundle Data Type",
+                    "name": "bundle_data_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61ae6d2d4d3b5",
+                                "operator": "==",
+                                "value": "bundles"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "starting_price": "Starting Price",
+                        "minimum_channel_count": "Maximum Channel Count",
+                        "max_download_speeds": "Max Download Speeds",
+                        "acsi_rating": "ACSI Rating",
+                        "fixed_price_guarentee": "Fixed price Guarantee",
+                        "credit_check_required": "Credit Check Required",
+                        "contract_buyouts": "Contract Buyouts",
+                        "early_termination_fee": "Early Termination Fee",
+                        "custom": "Custom"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61ae66c8a520c",
+            "label": "Button Type",
+            "name": "button_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "link": "Provider Phone\/Link",
+                "popup": "Zip Search Popup"
+            },
+            "default_value": "link",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61ae66f1a520d",
+            "label": "Button Text",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61ae66c8a520c",
+                        "operator": "==",
+                        "value": "popup"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Check Availability",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61aafebcd4a53",
+            "label": "Disclaimer",
+            "name": "disclaimer",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/our-picks"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1644338687
+}

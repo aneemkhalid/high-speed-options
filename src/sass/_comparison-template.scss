@@ -1,0 +1,77 @@
+/* Comparison Template */
+
+.comparison-page-template {
+	
+	img {
+        height: auto;
+        max-width: 100%;
+    }
+	.vertical_page_template {
+		overflow:visible;
+	}
+    .comparison-logos-header {
+
+    	position: relative;
+
+        .dots-container {
+	        position: absolute;
+	        top: 0;
+	        bottom: 0;
+	        left: 0;
+	        width: 2000px;
+	        margin-left: 125px;
+	    }
+    }
+
+    .white-background-card {
+    	img {
+    		max-height: 50px;
+    		width:auto;
+    	}
+    }
+
+    #ez-toc-container .ez-toc-title-container {
+
+    	padding: 14px 0 !important;
+
+    	.ez-toc-title {
+    		display:block;
+    	}
+    }
+
+    @media screen and (max-width: $tablet-screen){
+    	.comparison-logos-header {
+	    	.dots-container {
+	    		top: calc(50% - 100px);
+	    		max-height:200px;
+	    	}
+	    }	
+    	.commercial_page_left_content {
+    		width:100%;
+    		padding-right:0;
+    	}
+    	.commercial_page_left_content #ez-toc-container {
+		    display: block;
+		    margin-top:3em;
+		}
+		.commercial_page_content .commercial_page_table_of_content {
+			display:none;
+		}
+    }
+}
+.comparison-header-container {
+	background-color: $lightBlue;
+	overflow:hidden;
+}
+
+@media screen and (max-width: $small-tablet-screen) {
+	.comparison-header-container {
+		background:none !important;
+	}
+	.comparison-logos-header {
+		display:none !important;
+	}
+	.commercial_page_left_content #ez-toc-container {
+	    margin-top:0 !important;
+	}
+} 

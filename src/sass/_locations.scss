@@ -1,0 +1,27 @@
+/* Locations */
+
+.locations-main {
+	.banner {
+		background-image: url('images/locations_header.png');
+	}
+	.locations-content {
+		ul {
+			margin-left: 15px;
+			li {
+				padding-left:22px;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.banner {
+			background-position: 50%;
+			padding-bottom: 50px;
+			h1 {
+				padding:0;
+				line-height:1.25;
+			}
+		}
+	}
+}
